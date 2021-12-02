@@ -1,8 +1,7 @@
 <template>
     <header>
+        <Button @btn-click="$emit('toggle-add-task')" />
         <h1>{{ title }}</h1>
-        <Button @toggle-add-task="$emit('toggle-add-task')" v-btn="  fa-bars" color="green" />
-        <i class="fa fa-bars"></i>
     </header>
 </template>
 
@@ -12,6 +11,7 @@ export default {
     name: 'Header',
     props: {
         title: String,
+        showAddTask: Boolean
     },
     components: {
         Button
@@ -25,5 +25,9 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+}
+
+h1 {
+    align-items: center;
 }
 </style>

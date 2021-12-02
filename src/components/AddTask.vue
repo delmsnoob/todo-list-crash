@@ -15,7 +15,7 @@
         </div>
             <div class="form-control form-control-check">
                 <label>Set Reminder</label>
-                <input type="checkbox" v-model="reminder" name="reminder">
+                <input type="checkbox" v-model="reminder" class="form-check" name="reminder">
             </div>
 
             <input type="submit" value="Save Task" class="btn btn-block">
@@ -42,7 +42,7 @@
                 }
 
                 const newTask = {
-                    id: Math.floor(Math.random() * 100000),
+                    // id: Math.floor(Math.random() * 100000),
                     text: this.text,
                     day: this.day,
                     reminder: this.reminder,
@@ -72,10 +72,10 @@
 }
 
 .form-control input {
-    width: 100%;
+    width: 98%;
     height: 40px;
     margin: 5px;
-    padding: 3px 7px;
+    padding:20px 15px;
     font-size: 17px;
 }
 
@@ -92,5 +92,9 @@
 .form-control-check input {
     flex: 2;
     height: 20px;
+}
+
+.form-control.form-control-check > .form-check {
+    margin-right: 100px;
 }
 </style>

@@ -1,18 +1,24 @@
 <template>
-    <button @click="onClick()" :style="{background: color}" class="btn">{{text}}</button>
+    <i @click="onClick()" class="temp fa fa-bars"></i>
 </template>
 
 <script>
 export default {
     name: 'Button',
     props: {
-        text: String,
         color: String
     },
     methods: {
         onClick() {
-            this.$emit('toggle-add-task')
+            this.$emit('btn-click')
         },
     }
 }
 </script>
+
+<style scoped>
+.temp {
+    font-size: 2.2em;
+    /* margin-right: 5px; */
+}
+</style>
